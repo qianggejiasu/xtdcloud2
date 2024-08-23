@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新天地・加速云（资源发布页）</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #666;
+            margin: 20px 0;
+        }
+        p {
+            color: #666;
+            margin: 20px 0;
+        }
+        .notice {
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 20px;
+            background-color: #ffffe0;
+            padding: 15px;
+            border: 2px solid #ff0000;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .link-section {
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff;
+            background-color: #e0f7ff;
+            padding: 15px;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+        }
+        .link-section p {
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:active {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 标题 -->
+    <h1>新天地・加速云（资源发布页）</h1>
+    
+    <!-- 副标题 -->
+    <h2>请收藏保存本页面以防失联（点击复制本页面网址的按钮）</h2>
+
+    <!-- 醒目的注意事项 -->
+    <p class="notice">注意：新天地所有站在微信/QQ内禁止直接访问，请点击复制链接手动到浏览器粘贴并访问。</p>
+
+    <!-- 醒目的链接1 -->
+    <div class="link-section">
+        <p>新天地总教程：</p>
+        <button onclick="copyLink('https://xtd.rc25.cn/doc/30/')">点击复制链接</button>
+        <a href="https://xtd.rc25.cn/doc/30/" target="_blank"><button>点击进入</button></a>
+    </div>
+
+    <!-- 醒目的链接2 -->
+    <div class="link-section">
+        <p>新天地总教程（备用）：</p>
+        <button onclick="copyLink('https://xtd.rc25.cn/doc/30/')">点击复制链接</button>
+        <a href="https://xtd.rc25.cn/doc/30/" target="_blank"><button>点击进入</button></a>
+    </div>
+
+    <script>
+        function copyLink(url) {
+            var tempInput = document.createElement('textarea');
+            tempInput.value = url;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // 适配移动设备
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("链接已复制到剪贴板！");
+        }
+    </script>
+
+</body>
+</html>
